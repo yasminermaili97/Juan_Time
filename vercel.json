@@ -1,5 +1,11 @@
 {
     "version": 2,
+    "frameworks": null,
+    "functions": {
+      "api/index.php": {
+        "runtime": "vercel-php@0.7.0"
+      }
+    },
     "routes": [
       {
         "src": "/(.*)",
