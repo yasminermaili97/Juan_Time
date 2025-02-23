@@ -4,10 +4,10 @@
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.6.0" }
     },
-    "routes": [{
-        "src": "/(.*)",
-        "dest": "/public/index.php"
-    }],
+    "routes": [
+        { "handle": "filesystem" },
+        { "src": "/(.*)", "dest": "/api/index.php" }
+    ],
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
@@ -15,10 +15,9 @@
 
         "DB_CONNECTION": "pgsql",
         "DB_HOST": "aws-0-us-west-1.pooler.supabase.com",
-        "DB_PORT": "6543",
+        "DB_PORT": "5432",
         "DB_DATABASE": "postgres",
         "DB_USERNAME": "postgres.vnnzmpxuutlvrsarkcjs",
-        "DB_PASSWORD": "MldIIDiifVcI1e7e",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
