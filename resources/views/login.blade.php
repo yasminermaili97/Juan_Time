@@ -21,7 +21,7 @@
             const data = await response.json();
             if (response.ok) {
                 localStorage.setItem("token", data.access_token);
-                window.location.href = "/resources/views/dashboard.blade.php";
+                window.location.href = "/dashboard";
             } else {
                 alert(data.message);
             }
@@ -31,7 +31,7 @@
 <body>
     <div class="container">
     <h2 class="mb-3 text-center text-black dark:text-white">Iniciar Sesión</h2>
-    <form onsubmit="login(event)" action="/api/login" method="POST" class="mb-3 w-50">
+    <form onsubmit="login(event)" action="/api/login" method="POST" class="m-auto w-50">
         <label for="email" class="form-label">Email:</label>
         <input type="email" id="email" required class="form-control"><br>
         <label>Contraseña:</label>
