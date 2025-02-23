@@ -85,7 +85,7 @@
 </head>
 <body class="container mt-4">
     <header class="mb-4 text-center">
-        <h1>Dashboard</h1>
+        <h1>Juan Time: Aplicación web interna para la gestión de relojes</h1>
     </header>
 
     <div class="text-end mb-3">
